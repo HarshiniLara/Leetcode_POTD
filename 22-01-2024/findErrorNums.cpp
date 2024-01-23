@@ -2,8 +2,7 @@ class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) {
         vector<int> temp(nums.size(), 0);
-        for(int i:nums)
-        temp[i-1]++;
+        for(int i:nums) temp[i-1]++;
         int target, repeated;
         for(int i=0; i<nums.size(); i++) {
             if(temp[i]==2) repeated = i+1;
