@@ -15,10 +15,8 @@ public:
     void reverseInorder(TreeNode* root) {
         if(!root) return;
         if(root->right) reverseInorder(root->right);
-
         sum+=root->val;
         root->val = sum;
-
         if(root->left) reverseInorder(root->left);
     }
     TreeNode* bstToGst(TreeNode* root) {
